@@ -15,7 +15,7 @@
 </head>
 <body class="from-red-400  to-purple-700 bg-gradient-to-b justify-between flex  h-screen flex-col ">
     <nav class="flex w-full h-48 bg-gray-800 opacity-80">
-        <h1 class="my-auto mx-auto text-5xl text-gray-100"><i class="fas fa-atlas text-purple-400"></i> Only Read</h1>
+        <h1 class="my-auto mx-auto text-5xl text-gray-100"><i class="fas fa-atlas text-purple-400"></i><a href="{{ url_for('mostrarLibros') }}"> Only Read</a></h1>
     </nav>
     <div class="flex w-full h-full my-auto mx-auto">
         {% block content %}
