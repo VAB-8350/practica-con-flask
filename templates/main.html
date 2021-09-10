@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- railwindcss -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <!-- railwindcss -->
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <!-- fontawesome -->
+
+    <title>libros</title>
+</head>
+<body class="from-red-400  to-purple-700 bg-gradient-to-b justify-between flex  h-screen flex-col ">
+    <nav class="flex w-full h-48 bg-gray-700 opacity-80">
+        <h1 class="my-auto mx-auto text-5xl text-gray-100"><i class="fas fa-atlas text-purple-400"></i> Only Read</h1>
+    </nav>
+    <div class="flex w-full h-full my-auto mx-auto">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <footer class="flex w-full h-1/6 bg-gray-700 text-gray-100">
+        <div class="w-1/2 text-center my-auto text-xl">
+            <h3> <a href=""><b class="text-purple-400">Only Read</b></a><i class="far fa-registered"></i>  todos los derechos recerbados</h3>
+        </div>
+        <div class="flex w-1/2 my-auto text-3xl">
+            <div class="flex gap-5 mx-auto">
+                <h2>Contactanos:</h2>
+                <a href=""><i class="fab fa-facebook"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+                <a href=""><i class="fab fa-twitter-square"></i></a>
+                <a href=""><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+    
+    
+</body>
+</html>

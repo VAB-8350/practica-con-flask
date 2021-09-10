@@ -1,0 +1,37 @@
+{% extends 'main.html' %}
+{% block content%}
+<div class="flex flex-col bg-gray-800 opacity-70 w-3/4 h-3/4 mx-auto my-auto rounded-md shadow-2xl p-5">
+    <h2 class="text-gray-100 text-4xl text-center mt-2 mb-2">libros</h2>
+    <div class="flex-grow">
+        <table class="table-fixed w-full ">
+            <tr class="text-md text-gray-100 border-b-2 border-purple-500">
+                <th>Libro</th>
+                <th>Autor</th>
+                <th>Genero</th>
+                <th></th>
+            </tr>
+            {% for libro in libros %}
+            <tr class="text-ms text-gray-200 text-center border-b border-blue-300">
+                <td>{{libro.titulo}}</td>
+                <td>{{libro.autor}}</td>
+                <td>{{libro.genero}}</td>
+                <td>
+                    <a href="{{url_for('editarLibro', libro_id = libro.id )}}">
+                        <i class="fas fa-pencil-alt text-blue-400 mr-2"></i>
+                    </a>
+                    <a href="{{url_for('eliminarLibro', libro_id = libro.id )}}">
+                        <i class="fas fa-trash text-red-500" ></i>
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <div class="flex border-t-2 border-purple-500 mt-5 pt-3 w-full mx-auto">
+        <a href="{{url_for('nuevoLibro')}}" class="bg-green-600 p-2 rounded-2xl mx-auto text-gray-100">
+            <i class="fas fa-plus"></i> Agregar un Libro
+        </a>
+    </div>
+    
+</div>
+{% endblock %}
